@@ -1,36 +1,43 @@
-ActiveRecord Without Rails
+MetalLibs
 ==========================
 
-Just a simple example of using ActiveRecord migrations without Rails
+Purpose
+-------
 
-tasks you can do:
+An implmentation of Holy Diver Mad Libs, lovingly ripped off from the [Heavy Metal Fun Time Activity Book](http://www.amazon.com/Heavy-Metal-Time-Activity-Book/dp/155022798X), 
+using standard Ruby library for Nashville Software School, spring 2013.
 
-* `rake db:create`
-* `rake db:migrate`
-* `rake db:drop`
 
-Or, you can run the thing to show that it'll connect
+Project Status / TODO
+---------------------
 
-```
-ruby ar-no-rails
-```
+* Implement user options prompt at startup for multiple song selection
+* Add color scheme for blank words
+* Add undo feature
+* Explore options for exporting output as .txt file.
 
-Output:
-> Count of Pages: 0
+Features
+--------
+This app will rewrite the lyrics of classic metal songs in Mad Libs style, relying on user input.
 
-Lastly, you can IRB it to do stuff:
 
-$ irb
+Usage Instructions
+------------------
 
-```
->> require "./ar-no-rails"
-=> true
->> Page.new
-=> #<Page id: nil, content: nil, published: false>
->> Page.create content: "the-content"
-=> #<Page id: 1, content: "the-content", published: false>
-```
+To run the app, just run 'metallibs' from the command line. The app will prompt you for a series of words and display the
+finished output. 
 
-Copyright
+
+Author
+------
+
+Steve Cunningham
+
+Changelog
 ---------
-None. Really.
+
+5/24/2013 - Committed first working version.
+
+License
+-------
+Copyright (c) 2013 Steve Cunningham. All rights reserved, all wrongs reversed. 

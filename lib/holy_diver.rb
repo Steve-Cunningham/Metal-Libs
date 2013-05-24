@@ -3,32 +3,26 @@ def holy_diver
 
 print "Please enter an adjective: "
 input = gets.strip
-
 MetalLib.create(type_id: "adjective_1", user_input: input)
 
 print "Please enter a verb: "
 input = gets.strip
-
 MetalLib.create(type_id: "verb_1", user_input: input)
 
 print "Type the name of an animal: "
 input = gets.strip
-
 MetalLib.create(type_id: "animal_1", user_input: input)
 
 print "Name a feature of that animal: "
 input = gets.strip
-
 MetalLib.create(type_id: "animal_feature", user_input: input)
 
 print "Name one of the five senses: "
 input = gets.strip
-
 MetalLib.create(type_id: "sense", user_input: input)
 
 print "Name a gemstone: "
 input = gets.strip
-
 MetalLib.create(type_id: "gemstone", user_input: input)
 
 print "Name another animal: "
