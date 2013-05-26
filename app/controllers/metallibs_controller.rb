@@ -1,9 +1,9 @@
 class MetalLibsController
-  # include Formatter
+  require_relative '../../lib/holy_diver.rb'
+  require_relative '../../lib/run_to_the_hills.rb'
+  require_relative '../../lib/the_trees.rb'
+  attr_accessor :user_selection
 
-  def initialize params
-    @params = params
-  end
 
   def index
     projects = MetalLib.all
@@ -29,10 +29,7 @@ class MetalLibsController
   end
 
   def clear_table
-    matching_metal_libs = MetalLib.all? { |metal_lib|  }
-    matching_metal_libs.each do |metal_lib|
-        metal_lib.destroy
-    end
+    MetalLib.destroy_all
   end
 
   def pluck(column_name)
@@ -47,6 +44,32 @@ class MetalLibsController
       klass.connection.select_all(relation.arel).map! do |attributes|
         klass.type_cast_attribute(attributes.keys.first, klass.initialize_attributes(attributes))
       end
+  end
+
+  def song_select
+    puts <<-eos
+        1) "Holy Diver"
+        2) "Run To The Hills"
+        3) "The Trees"
+    eos
+    print "Please select a song: "
+    @user_selection = gets.strip
+    return @user_selection
+  end
+
+  def song_run(user_selection)
+    user_selection = @user_selection
+    if user_selection.length > 1
+        return ArgumentError, "You must select a number between 1 and 3"
+    elsif user_selection.to_i == 1
+        holy_diver
+    elsif user_selection.to_i == 2
+        run_to_the_hills
+    elsif user_selection.to_i == 3
+        the_trees
+    else
+        return ArgumentError, "Please select a number between 1 and 3"
+    end
   end
 
   private
