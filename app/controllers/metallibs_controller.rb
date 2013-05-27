@@ -52,6 +52,12 @@ class MetalLibsController
     end
   end
 
+  def colorize(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+  end
+
+  def blue(text); colorize(text, 34); end
+
   private
 
   def params
