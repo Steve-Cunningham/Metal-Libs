@@ -11,7 +11,6 @@ using standard Ruby library for Nashville Software School, spring 2013.
 Project Status / TODO
 ---------------------
 
-* Implement user options prompt at startup for multiple song selection
 * Add color scheme for blank words
 * Add undo feature
 * Explore options for exporting output as .txt file.
@@ -24,7 +23,7 @@ This app will rewrite the lyrics of classic metal songs in Mad Libs style, relyi
 Usage Instructions
 ------------------
 
-To run the app, just run 'metallibs' from the command line. The app will prompt you for a series of words and display the
+To run the app, run 'metallibs' from the command line. The app will prompt you for a series of words and display the
 finished output. 
 
 
