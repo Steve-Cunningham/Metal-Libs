@@ -11,6 +11,8 @@ using standard Ruby library for Nashville Software School, spring 2013.
 Project Status / TODO
 ---------------------
 
+[![Build Status](https://travis-ci.org/elizabrock/NSS-futureperfect-CLI.png)](https://travis-ci.org/elizabrock/NSS-futureperfect-CLI)
+
 * Add color scheme for blank words
 * Add undo feature
 * Explore options for exporting output as .txt file.
