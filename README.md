@@ -11,7 +11,7 @@ using standard Ruby library for Nashville Software School, spring 2013.
 Project Status / TODO
 ---------------------
 
-[![Build Status](https://travis-ci.org/Steve-Cunningham/Metal-Libs.png)](https://travis-ci.org/Steve-Cunningham/MetalLibs/)
+[![Build Status](https://travis-ci.org/Steve-Cunningham/Metal-Libs.png)](https://travis-ci.org/Steve-Cunningham/Metal-Libs/)
 
 * Add color scheme for blank words
 * Add undo feature
