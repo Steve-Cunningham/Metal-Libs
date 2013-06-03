@@ -39,16 +39,16 @@ class MetalLibsController
 
   def song_run(user_selection)
     user_selection = @user_selection
-    if user_selection.length > 1
-        return ArgumentError, "You must select a number between 1 and 3"
-    elsif user_selection.to_i == 1
+    if user_selection.to_i == 1
         holy_diver
     elsif user_selection.to_i == 2
         run_to_the_hills
     elsif user_selection.to_i == 3
         the_trees
-    else
-        return ArgumentError, "Please select a number between 1 and 3"
+    else 
+        puts "You must select a number between 1 and 3"
+        song_select
+        song_run(user_selection)
     end
   end
 
