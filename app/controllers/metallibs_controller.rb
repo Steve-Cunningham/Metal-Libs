@@ -45,7 +45,7 @@ class MetalLibsController
         run_to_the_hills
     elsif user_selection.to_i == 3
         the_trees
-    else 
+    else
         puts "You must select a number between 1 and 3"
         song_select
         song_run(user_selection)
@@ -53,14 +53,11 @@ class MetalLibsController
   end
 
   def colorize(text, color_code)
-  "\e[#{color_code}m#{text}\e[0m"
+    "#{color_code}#{text}e[0m"
   end
 
-  def blue(text); colorize(text, 34); end
-
-  private
-
-  def params
-    @params
+  def blue(text)
+    colorize(text, "e[34m")
   end
+
 end

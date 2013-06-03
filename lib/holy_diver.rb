@@ -1,3 +1,4 @@
+require_relative '../app/controllers/metallibs_controller'
 
 def holy_diver
 
@@ -113,6 +114,7 @@ MetalLib.create(type_id: "sense_2", user_input: input)
 
 x = MetalLib.pluck(:user_input)
 
+puts "HOLY DIVER"
 puts <<-eos 
 
 Holy diver
@@ -122,7 +124,6 @@ Oh what's #{x[1]}ing of me
 Ride the #{x[2]}
 You can see his #{x[3]} but you know he's clean
 Oh don't you #{x[4]} what I mean
-
 Gotta get away
 Holy Diver
 
@@ -133,7 +134,6 @@ Something is #{x[8]} for you
 #{x[9]} for the morning
 You can hide in the #{x[10]} 'till you see the light
 Oh #{x[11]} will pray it's all right
-
 Gotta get away - get away
 
 Between the #{x[12]} lies
@@ -156,7 +156,6 @@ Oh what's #{x[23]} of me
 Ride the #{x[24]}
 You can see his #{x[25]} but you know he's clean
 Oh don't you #{x[26]} what I mean
-
 Gotta get away
 Holy Diver
 eos
